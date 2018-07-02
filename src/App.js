@@ -13,7 +13,7 @@ class App extends React.Component {
 
     this.state = {
       client: {
-        sandbox: 'ATk7Mdlwfm7mGgvwxwVe18UAV3F3HmnhPcXSFdFnhNTAPDQ5cCE9MkiaXi7Gi8-ooUfeuZM4PgeN3gvd'
+        sandbox: '<insert client id here>'
       },
       env: 'sandbox',
       funding: { disallowed: [paypal.FUNDING.CARD, paypal.FUNDING.CREDIT] },
