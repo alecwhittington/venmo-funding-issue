@@ -1,9 +1,10 @@
-import paypal from 'paypal-checkout';
+// import paypal from 'paypal-checkout';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 
+const paypal = window.paypal;
 let PayPalButton = paypal.Button.driver('react', { React, ReactDOM });
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
 
     this.state = {
       client: {
-        sandbox: '<Insert ClientID here>'
+        sandbox: 'ATk7Mdlwfm7mGgvwxwVe18UAV3F3HmnhPcXSFdFnhNTAPDQ5cCE9MkiaXi7Gi8-ooUfeuZM4PgeN3gvd'
       },
       env: 'sandbox',
       funding: { disallowed: [paypal.FUNDING.CARD, paypal.FUNDING.CREDIT] },
@@ -55,7 +56,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
           <PayPalButton
             commit={this.state.commit}
             env={this.state.env}
@@ -66,7 +67,7 @@ class App extends React.Component {
             onAuthorize={this.onAuthorize}
             onCancel={this.onCancel}
           />
-        </p>
+        </div>
       </div>
     );
   }
