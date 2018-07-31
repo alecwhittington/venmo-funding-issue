@@ -14,6 +14,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "paypal-checkout": "^4.0.204"
+    "paypal-checkout": "^4.0.209"
   }
 }
